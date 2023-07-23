@@ -5,19 +5,6 @@ from selenium.webdriver import DesiredCapabilities
 from selenium.webdriver.chrome.service import Service
 
 
-# @pytest.fixture()
-# def set_up():
-#     print('Start test')
-#     yield
-#     print('Finish test')
-#
-#
-# @pytest.fixture(scope='module')
-# def set_group():
-#     print('Enter system')
-#     yield
-#     print('Exit system')
-
 @pytest.fixture(autouse=True, scope="function")
 def driver():
     # инициализация браузера
@@ -31,8 +18,6 @@ def driver():
     driver = webdriver.Chrome(service=s, options=o, desired_capabilities=capabilities)
 
     yield driver
-
-    # завершение работы браузера
     driver.quit()
 
 

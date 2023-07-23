@@ -105,10 +105,6 @@ class Dog_food_page(Base):
         self.get_result_filter().click()
         print('Confirm filters')
 
-    # def click__result_filter(self):
-    #     self.get_result_filter().click()
-    #     print('Confirm filters')
-
     def click_button_selected_feed(self):
         self.get_button_selected_feed().click()
         print('Click button selected feed')

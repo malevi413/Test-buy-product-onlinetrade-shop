@@ -3,8 +3,10 @@ from pages.cart_page import Cart_page
 from pages.catalogue_dogs_page import Dog_page
 from pages.dog_food_page import Dog_food_page
 from pages.main_page import Main_page
+import allure
 
 
+@allure.description('Test buy filter product')
 def test_buy_filter_product(driver):
 
     print("Start Test_1")
@@ -20,6 +22,7 @@ def test_buy_filter_product(driver):
     dp = Dog_food_page(driver)
     dp.select_feed_parameters()
 
+    time.sleep(3)
     dp.confirmation_order()
     cart_p = Cart_page(driver)
     cart_p.continue_order()

@@ -1,3 +1,4 @@
+import allure
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
@@ -120,18 +121,20 @@ class Dog_food_page(Base):
     #     self.click_sorting_desc()
 
     def select_feed_parameters(self):
-        Logger.add_start_step(method='select_feed_parameters')
-        self.click_feed_in_stock()
-        self.click_dry_feed()
-        self.click_lamb_taste()
-        self.choose_min_weight_feed()
-        self.choose_max_weight_feed()
-        self.click_name_feed()
-        self.confirm_result_filter()
-        Logger.add_end_step(url=self.driver.current_url, method='select_feed_parameters')
+        with allure.step('select_feed_parameters'):
+            Logger.add_start_step(method='select_feed_parameters')
+            self.click_feed_in_stock()
+            self.click_dry_feed()
+            self.click_lamb_taste()
+            self.choose_min_weight_feed()
+            self.choose_max_weight_feed()
+            self.click_name_feed()
+            self.confirm_result_filter()
+            Logger.add_end_step(url=self.driver.current_url, method='select_feed_parameters')
 
     def confirmation_order(self):
-        Logger.add_start_step(method='confirmation_order')
-        self.click_button_selected_feed()
-        self.click_confirmation_order()
-        Logger.add_end_step(url=self.driver.current_url, method='confirmation_order')
+        with allure.step('confirmation_order'):
+            Logger.add_start_step(method='confirmation_order')
+            self.click_button_selected_feed()
+            self.click_confirmation_order()
+            Logger.add_end_step(url=self.driver.current_url, method='confirmation_order')

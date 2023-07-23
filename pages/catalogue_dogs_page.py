@@ -1,3 +1,4 @@
+import allure
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
@@ -25,7 +26,8 @@ class Dog_page(Base):
 
     # Methods
     def select_dog_catalogue(self):
-        Logger.add_start_step(method='select_dog_catalogue')
-        self.click_get_dog_food_catalogue()
-        Logger.add_end_step(url=self.driver.current_url, method='select_dog_catalogue')
+        with allure.step('select_dog_catalogue'):
+            Logger.add_start_step(method='select_dog_catalogue')
+            self.click_get_dog_food_catalogue()
+            Logger.add_end_step(url=self.driver.current_url, method='select_dog_catalogue')
 

@@ -3,7 +3,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from base.base_class import Base
 from utilities.logger import Logger
-
+import allure
 
 class Main_page(Base):
     url = 'https://www.onlinetrade.ru/'
@@ -47,11 +47,12 @@ class Main_page(Base):
 
     # Methods
     def select_pet_products(self):
-        Logger.add_start_step(method='select_pet_products')
-        self.driver.get(self.url)
-        self.driver.maximize_window()
-        self.click_button_catalogue()
-        self.click_pet_products()
-        self.click_dog_products()
-        self.assert_word(self.get_main_word(), 'Для собак')
-        Logger.add_end_step(url=self.driver.current_url, method='select_pet_products')
+        with allure.step('select_pet_products'):
+            Logger.add_start_step(method='select_pet_products')
+            self.driver.get(self.url)
+            self.driver.maximize_window()
+            self.click_button_catalogue()
+            self.click_pet_products()
+            self.click_dog_products()
+            self.assert_word(self.get_main_word(), 'Для собак')
+            Logger.add_end_step(url=self.driver.current_url, method='select_pet_products')

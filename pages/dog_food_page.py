@@ -114,9 +114,9 @@ class Dog_food_page(Base):
         print('Сonfirmation order')
 
     # Methods
-    def sorting_goods(self):
-        self.click_sorting()
-        self.click_sorting_desc()
+    # def sorting_goods(self):
+    #     self.click_sorting()
+    #     self.click_sorting_desc()
 
     def select_feed_parameters(self):
         self.click_feed_in_stock()

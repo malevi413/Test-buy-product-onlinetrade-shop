@@ -11,7 +11,6 @@ class Dog_page(Base):
         self.driver = driver
 
     # Locators
-
     dogs_food_button = "//a[@href='/catalogue/korm_dlya_sobak-c1017/']"
 
 

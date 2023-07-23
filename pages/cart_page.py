@@ -2,6 +2,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from base.base_class import Base
+from utilities.logger import Logger
 
 
 class Cart_page(Base):
@@ -28,6 +29,8 @@ class Cart_page(Base):
 
     # Methods
     def continue_order(self):
+        Logger.add_start_step(method='continue_order')
         self.click_button_continue()
         self.assert_word(self.get_name_feed(), 'Корм для взрослых собак всех пород Brit Premium Dog Sensitive с '
                                                'чувствительным пищеварением, с ягненком и идейкой 15 кг')
+        Logger.add_end_step(url=self.driver.current_url, method='continue_order')

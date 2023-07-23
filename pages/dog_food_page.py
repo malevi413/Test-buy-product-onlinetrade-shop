@@ -119,7 +119,7 @@ class Dog_food_page(Base):
     # def sorting_goods(self):
     #     self.click_sorting()
     #     self.click_sorting_desc()
-
+    """фильтрация товаров"""
     def select_feed_parameters(self):
         with allure.step('select_feed_parameters'):
             Logger.add_start_step(method='select_feed_parameters')
@@ -132,6 +132,7 @@ class Dog_food_page(Base):
             self.confirm_result_filter()
             Logger.add_end_step(url=self.driver.current_url, method='select_feed_parameters')
 
+    """подтверждение заказа"""
     def confirmation_order(self):
         with allure.step('confirmation_order'):
             Logger.add_start_step(method='confirmation_order')

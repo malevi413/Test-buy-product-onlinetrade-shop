@@ -16,13 +16,6 @@ class Base():
 
         print("Good value word")
 
-    """Method screenshot"""
-
-    # def get_screenshot(self):
-    #     now_date = datetime.datetime.utcnow().strftime("%Y.%m.%d.  %H.%M.%S")
-    #     name_screenshot = 'screenshot ' + now_date + ' ' + '.png'
-    #     self.driver.save_screenshot('C:\\Users\\malev\\OneDrive\\Desktop\\PythonProjects\\Alex_smith\\main_project'
-    #                                 '\\screen\\' + name_screenshot)
 
     """Method assert url"""
     def assert_url(self, result):

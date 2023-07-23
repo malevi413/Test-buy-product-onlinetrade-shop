@@ -45,7 +45,9 @@ class Main_page(Base):
         self.get_dog_products().click()
         print('Click dog products')
 
+
     # Methods
+    '''Выбор категории товары для животных'''
     def select_pet_products(self):
         with allure.step('select_pet_products'):
             Logger.add_start_step(method='select_pet_products')

@@ -29,8 +29,9 @@ class Cart_page(Base):
         print('Click button continue')
 
     # Methods
-    """продолжение заказа"""
+
     def continue_order(self):
+        """Продолжение заказа"""
         with allure.step('continue_order'):
             Logger.add_start_step(method='continue_order')
             self.click_button_continue()

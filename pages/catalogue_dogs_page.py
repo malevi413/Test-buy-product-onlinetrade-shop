@@ -27,8 +27,9 @@ class Dog_page(Base):
 
 
     # Methods
-    '''Выбор категории товары для собак'''
+
     def select_dog_catalogue(self):
+        """Выбор категории товары для собак"""
         with allure.step('select_dog_catalogue'):
             Logger.add_start_step(method='select_dog_catalogue')
             self.click_get_dog_food_catalogue()

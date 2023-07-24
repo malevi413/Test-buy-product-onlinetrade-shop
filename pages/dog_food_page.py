@@ -132,8 +132,9 @@ class Dog_food_page(Base):
             self.confirm_result_filter()
             Logger.add_end_step(url=self.driver.current_url, method='select_feed_parameters')
 
-    """подтверждение заказа"""
+
     def confirmation_order(self):
+        """Подтверждение заказа"""
         with allure.step('confirmation_order'):
             Logger.add_start_step(method='confirmation_order')
             self.click_button_selected_feed()

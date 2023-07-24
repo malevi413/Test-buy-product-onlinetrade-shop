@@ -5,6 +5,7 @@ from base.base_class import Base
 from utilities.logger import Logger
 import allure
 
+
 class Main_page(Base):
     url = 'https://www.onlinetrade.ru/'
 
@@ -45,10 +46,9 @@ class Main_page(Base):
         self.get_dog_products().click()
         print('Click dog products')
 
-
     # Methods
-    '''Выбор категории товары для животных'''
     def select_pet_products(self):
+        """Выбор категории товары для животных"""
         with allure.step('select_pet_products'):
             Logger.add_start_step(method='select_pet_products')
             self.driver.get(self.url)

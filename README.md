@@ -3,7 +3,9 @@
 Тест покупки выбранного товара после использования группы фильтров без регистрации на сайте. Онлайн магазин https://www.onlinetrade.ru/
 Настройки браузера в файлe conftest.py. 
 Добавлено логирование и отчеты в allure
-Запуск теста python -m pytest -s -v test_buy_product.py
+Запуск теста pysarm:
+  py.test --alluredir=%allure_result_folder% ./tests
+  allure serve %allure_result_folder%
 
 
 Тест кейс.

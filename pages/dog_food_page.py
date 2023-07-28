@@ -8,9 +8,7 @@ from utilities.logger import Logger
 
 class Dog_food_page(Base):
 
-    def __init__(self, driver):
-        super().__init__(driver)
-        self.driver = driver
+
 
     # Locators
     feed_in_stock = "//label[@id='l5950a4a1de00bc24202c5f78a0a726be']/span"

@@ -18,11 +18,11 @@ def test_buy_filter_product(driver):
     cp = Dog_page(driver)
     cp.select_dog_catalogue()
 
-    time.sleep(5)
+    time.sleep(7)
     dp = Dog_food_page(driver)
     dp.select_feed_parameters()
 
-    time.sleep(3)
+    time.sleep(5)
     dp.confirmation_order()
     cart_p = Cart_page(driver)
     cart_p.continue_order()

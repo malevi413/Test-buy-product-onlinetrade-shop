@@ -8,9 +8,7 @@ from utilities.logger import Logger
 
 class Cart_page(Base):
 
-    def __init__(self, driver):
-        super().__init__(driver)
-        self.driver = driver
+
 
     # Locators
     button_continue_no_registration = "//a[@title='Продолжить без регистрации']"

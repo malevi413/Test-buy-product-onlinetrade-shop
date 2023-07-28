@@ -9,9 +9,7 @@ import allure
 class Main_page(Base):
     url = 'https://www.onlinetrade.ru/'
 
-    def __init__(self, driver):
-        super().__init__(driver)
-        self.driver = driver
+
 
     # Locators
     button_catalogue = "//a[@class='header__button header__buttonCatalog  js__catalogLine__mainLink ']"
